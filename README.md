@@ -1,59 +1,91 @@
-# 🌱 AusTraits Summary Script
 
-This repository contains an R script to extract and summarise trait data for Australian plant species using the [AusTraits](https://github.com/traitecoevo/austraits) dataset.
+# 🌿 AusTraits Script: Extract & Summarise Plant Trait Data
 
-## 📌 What It Does
+This repository provides an R script to extract, clean, and summarise trait data for Australian plant species using the [AusTraits](https://github.com/traitecoevo/austraits) dataset.
 
-This script:
-- Downloads the latest version of the AusTraits dataset from Zenodo
-- Loads a species checklist and a list of traits
+🔗 **Repo URL:** [github.com/Naiyun1021/austraits-script-extract-data](https://github.com/Naiyun1021/austraits-script-extract-data)
+
+---
+
+## 📋 What This Script Does
+
+The script:
+- Installs required R packages
+- Downloads the most recent AusTraits dataset from Zenodo
+- Loads a list of target plant species and traits
 - Separates traits into **categorical** and **numeric**
-- Summarises both types across your species list
-- Outputs a wide-form CSV with trait values for each species
+- Summarises trait data for your species list
+- Saves a final summary CSV with wide-format traits
 
-## 📁 Files
+---
 
-- `final_trait_summary_script.R` – The main R script to run the summary process
-- `ALA-Plant-checklist-2025-04-21.csv` – Your plant species checklist (input)
-- `TraitsCombine-helen-Dorothy.xlsx` – Your list of traits to extract (input)
-- `final_trait_summary.csv` – The output file generated after running the script
+## 🗂️ Files in This Repo
 
-## 🚀 How to Use
+| File | Description |
+|------|-------------|
+| `final_trait_summary_script.R` | Main script to extract and summarise traits |
+| `ALA-Plant-checklist-2025-04-21.csv` | CSV input: list of species names |
+| `TraitsCombine-helen-Dorothy.xlsx` | Excel input: list of trait names |
+| `final_trait_summary.csv` | Output: wide-form summary of traits (created after running the script) |
 
-1. Clone or download this repo:
-    ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    ```
+---
 
-2. Open `final_trait_summary_script.R` in RStudio
+## 🚀 How to Run the Script
 
-3. Make sure your working directory contains:
-    - Your plant checklist CSV
-    - Your Excel file of traits
+### ✅ 1. Clone This Repository
 
-4. Run the script!  
-   It will install any needed packages, download the latest dataset, process your inputs, and write the summary to `final_trait_summary.csv`.
+```bash
+git clone https://github.com/Naiyun1021/austraits-script-extract-data.git
+cd austraits-script-extract-data
+```
 
-## 📦 Required R Packages
+### ✅ 2. Open the R Script
 
-The script will install these automatically:
+Open `final_trait_summary_script.R` in **RStudio** or another R environment.
+
+### ✅ 3. Ensure Input Files Are in the Same Folder
+
+Make sure these files are present:
+- `ALA-Plant-checklist-2025-04-21.csv`
+- `TraitsCombine-helen-Dorothy.xlsx`
+
+### ✅ 4. Run the Script
+
+The script will:
+- Automatically install required packages (`austraits`, `remotes`, `readxl`, `tidyverse`)
+- Process trait and species data
+- Write `final_trait_summary.csv` to the working directory
+
+---
+
+## 🧪 Example Output Format
+
+| taxon_name           | growth_form         | leaf_area | ... |
+|----------------------|---------------------|-----------|-----|
+| Acacia dealbata      | tree (15); shrub (5)| 10.34     | ... |
+| Eucalyptus globulus  | tree (20)           | 55.12     | ... |
+
+---
+
+## 📦 Required Packages
+
+These will be installed automatically by the script:
+
 - `austraits`
 - `remotes`
 - `readxl`
 - `tidyverse`
 
-You just need R and an internet connection the first time.
+---
 
-## 🧪 Example Output
+## 🙋‍♂️ Author
 
-| taxon_name              | leaf_area       | growth_form        | ... |
-|------------------------|-----------------|--------------------|-----|
-| Acacia dealbata        | 12.34           | shrub (20); tree (5) | ... |
-| Eucalyptus globulus    | 45.67           | tree (30)          | ... |
-
-## 📬 Contact
-
-For questions or suggestions, feel free to open an issue or contact [your name] at [your email].
+**Naiyun Liang**  
+Bachelor of Science in IT @ UTS  
+Data Analytics | Cybersecurity | R Programming
 
 ---
 
+## 📬 Questions or Suggestions?
+
+Feel free to open an [issue](https://github.com/Naiyun1021/austraits-script-extract-data/issues) or contact me through GitHub!
