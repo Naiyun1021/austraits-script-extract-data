@@ -82,7 +82,7 @@ These will be installed automatically by the script:
 
 **Naiyun Liang**  
 Bachelor of Science in IT @ UTS  
-Data Analytics | Cybersecurity | R Programming
+BioGeoDA Project 1 – Plant Traits Database
 
 ---
 
